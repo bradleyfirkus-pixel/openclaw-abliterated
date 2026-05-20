@@ -1,0 +1,51 @@
+{
+  "gateway": {
+    "mode": "local",
+    "bind": "lan",
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        },
+        "responses": {
+          "enabled": true
+        }
+      }
+    },
+    "controlUi": {
+      "allowedOrigins": ["*"]
+    }
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/data/workspace/default",
+      "model": {
+        "primary": "featherless/__FEATHERLESS_MODEL__"
+      },
+      "models": {
+        "featherless/__FEATHERLESS_MODEL__": {
+          "alias": "Featherless Launch Model"
+        }
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "featherless": {
+        "baseUrl": "https://api.featherless.ai/v1",
+        "apiKey": "__FEATHERLESS_API_KEY__",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "__FEATHERLESS_MODEL__",
+            "name": "Featherless Launch Model",
+            "input": ["text"],
+            "contextWindow": 32768,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  }
+}
