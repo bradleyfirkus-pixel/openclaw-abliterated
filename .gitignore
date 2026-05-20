@@ -1,1 +1,4 @@
-LmVudgpkYXRhLwpzaGFyZWRfd29ya3NwYWNlLwoqLmxvZwouRFNfU3RvcmUK
+LmVudgpkYXRhLwpzaGFyZWRfd29ya3NwYWNlLwoqLmxvZwouRFNfU3RvcmUK.env
+*.log
+__pycache__/
+*.pyc
